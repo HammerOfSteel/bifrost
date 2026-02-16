@@ -87,21 +87,110 @@
     #login-page { display:none; position:fixed; inset:0; align-items:center;
       justify-content:center; z-index:30; padding:24px; }
     #login-page.active { display:flex; }
-    .login-container { width:min(440px,92vw); background:var(--panel);
-      border:1px solid var(--line); border-radius:20px; padding:22px; }
-    .login-container h1 { margin:10px 0 16px; font-size:24px; text-align:center; }
+
+    /* Scrapboard background */
+    .scrapboard {
+      position:absolute; inset:0; overflow:hidden;
+      background:
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23b8956a' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+        linear-gradient(145deg, #2c1e14 0%, #3a2a1c 25%, #2e2018 50%, #352a1e 75%, #2c1e14 100%);
+    }
+    .scrapboard::before {
+      content:''; position:absolute; inset:0;
+      background:
+        radial-gradient(ellipse 900px 600px at 20% 30%, rgba(180,140,80,.08), transparent),
+        radial-gradient(ellipse 700px 500px at 80% 70%, rgba(160,120,60,.06), transparent);
+      pointer-events:none;
+    }
+
+    /* Cork-board texture overlay */
+    .scrapboard::after {
+      content:''; position:absolute; inset:0;
+      background:url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events:none;
+    }
+
+    /* Polaroid photos */
+    .polaroid {
+      position:absolute;
+      background:#f5f0e8;
+      padding:10px 10px 36px 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.4), 0 1px 4px rgba(0,0,0,.3);
+      transition: transform .6s ease, opacity .6s ease;
+    }
+    .polaroid img {
+      width:100%; height:100%; object-fit:cover;
+      filter:saturate(.85) contrast(1.05);
+    }
+    .polaroid .caption {
+      position:absolute; bottom:8px; left:0; right:0;
+      text-align:center; font-family:'Segoe Print','Comic Sans MS',cursive;
+      font-size:11px; color:#5a4a3a; letter-spacing:.3px;
+    }
+    .polaroid-1 { width:180px; height:180px; top:5%; left:3%; transform:rotate(-8deg); }
+    .polaroid-2 { width:200px; height:200px; top:8%; right:5%; transform:rotate(5deg); }
+    .polaroid-3 { width:170px; height:170px; bottom:10%; left:8%; transform:rotate(4deg); }
+    .polaroid-4 { width:190px; height:190px; bottom:5%; right:3%; transform:rotate(-6deg); }
+
+    /* String / twine decoration */
+    .twine {
+      position:absolute; top:0; left:5%; right:10%; height:100%;
+      pointer-events:none; z-index:1;
+    }
+    .twine::before {
+      content:''; position:absolute; top:12%; left:0; right:0;
+      border-top:2px dashed rgba(180,140,80,.2);
+      transform:rotate(-1deg);
+    }
+    .twine::after {
+      content:''; position:absolute; bottom:18%; left:5%; right:5%;
+      border-top:2px dashed rgba(180,140,80,.15);
+      transform:rotate(1.5deg);
+    }
+
+    /* Pin dots on polaroids */
+    .pin {
+      position:absolute; top:-6px; left:50%; transform:translateX(-50%);
+      width:14px; height:14px; border-radius:50%;
+      background:radial-gradient(circle at 40% 35%, #d44, #922);
+      box-shadow:0 2px 4px rgba(0,0,0,.4);
+      z-index:2;
+    }
+
+    .login-container { width:min(440px,92vw); background:rgba(23,26,33,.92);
+      border:1px solid rgba(122,162,247,.2); border-radius:20px; padding:28px 26px;
+      backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+      position:relative; z-index:10;
+      box-shadow: 0 8px 40px rgba(0,0,0,.5), 0 0 80px rgba(122,162,247,.08); }
+    .login-header { display:flex; flex-direction:column; align-items:center; margin-bottom:20px; }
+    .login-header h1 { margin:12px 0 4px; font-size:26px; text-align:center;
+      background:linear-gradient(135deg, #ff6b6b, #ffa94d, #ffd43b, #69db7c, #74c0fc, #b197fc);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      background-clip:text; font-weight:700; }
+    .login-header .subtitle { font-size:13px; color:var(--muted); letter-spacing:.5px; }
     .form-group { margin-bottom:16px; display:flex; flex-direction:column; }
     .form-group label { margin-bottom:8px; color:var(--muted); font-size:14px; }
-    .form-group input { background:var(--soft); border:1px solid var(--line);
+    .form-group input { background:rgba(31,36,48,.8); border:1px solid var(--line);
       border-radius:8px; padding:10px 12px; color:var(--text); font-size:16px; }
-    .form-group input:focus { outline:none; border-color:var(--accent); }
-    .login-btn { width:100%; padding:12px; background:var(--accent); border:none;
+    .form-group input:focus { outline:none; border-color:var(--accent);
+      box-shadow:0 0 0 3px rgba(122,162,247,.15); }
+    .login-btn { width:100%; padding:12px; border:none;
       border-radius:8px; color:white; font-size:16px; font-weight:600; cursor:pointer;
-      margin-top:16px; transition:opacity .2s; }
-    .login-btn:hover { opacity:.9; }
+      margin-top:16px; transition:all .3s;
+      background:linear-gradient(135deg, #7aa2f7 0%, #b197fc 50%, #ffa94d 100%);
+      background-size:200% 100%; }
+    .login-btn:hover { background-position:100% 0; box-shadow:0 4px 20px rgba(122,162,247,.3); }
     .login-btn:disabled { opacity:.5; cursor:not-allowed; }
     .error { background:#3a1e1e; border:1px solid #8b3a3a; color:#ff9999;
       padding:12px; border-radius:8px; margin-bottom:16px; }
+
+    @media (max-width:768px) {
+      .polaroid { transform:scale(.6) !important; }
+      .polaroid-1 { top:2%; left:-2%; }
+      .polaroid-2 { top:2%; right:-2%; }
+      .polaroid-3 { bottom:2%; left:-2%; }
+      .polaroid-4 { bottom:2%; right:-2%; }
+    }
 
     /* ── Modals ── */
     .modal { position:fixed; inset:0; display:none; align-items:center;
@@ -202,19 +291,76 @@
 
 <!-- Login Page -->
 <div id="login-page">
+  <!-- Scrapboard with polaroid family photos -->
+  <div class="scrapboard">
+    <div class="twine"></div>
+    <div class="polaroid polaroid-1">
+      <div class="pin"></div>
+      <img src="/3.png" alt="Family" loading="lazy" />
+      <div class="caption">Memories</div>
+    </div>
+    <div class="polaroid polaroid-2">
+      <div class="pin"></div>
+      <img src="/4.png" alt="Family" loading="lazy" />
+      <div class="caption">Together</div>
+    </div>
+    <div class="polaroid polaroid-3">
+      <div class="pin"></div>
+      <img src="/5.jpeg" alt="Family" loading="lazy" />
+      <div class="caption">Heritage</div>
+    </div>
+    <div class="polaroid polaroid-4">
+      <div class="pin"></div>
+      <img src="/5.png" alt="Family" loading="lazy" />
+      <div class="caption">Roots</div>
+    </div>
+  </div>
+
+  <!-- Login form -->
   <div class="login-container">
-    <h1>🧊 Brimfrost</h1>
+    <div class="login-header">
+      <!-- Bifrost rainbow bridge SVG -->
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Rainbow bridge arc -->
+        <path d="M8 52 Q32 4 56 52" stroke="url(#bifrost-grad)" stroke-width="3" fill="none" opacity=".9"/>
+        <path d="M12 52 Q32 10 52 52" stroke="url(#bifrost-grad)" stroke-width="2.5" fill="none" opacity=".7"/>
+        <path d="M16 52 Q32 16 48 52" stroke="url(#bifrost-grad)" stroke-width="2" fill="none" opacity=".5"/>
+        <path d="M20 52 Q32 22 44 52" stroke="url(#bifrost-grad)" stroke-width="1.5" fill="none" opacity=".35"/>
+        <!-- Glow -->
+        <path d="M8 52 Q32 4 56 52" stroke="url(#bifrost-grad)" stroke-width="8" fill="none" opacity=".12" filter="blur(3px)"/>
+        <!-- Stars -->
+        <circle cx="18" cy="14" r="1.2" fill="#ffd43b" opacity=".8"/>
+        <circle cx="46" cy="10" r="1" fill="#74c0fc" opacity=".7"/>
+        <circle cx="32" cy="6" r="1.5" fill="#b197fc" opacity=".9"/>
+        <circle cx="10" cy="24" r=".8" fill="#69db7c" opacity=".6"/>
+        <circle cx="54" cy="20" r="1" fill="#ffa94d" opacity=".7"/>
+        <!-- Ground line -->
+        <line x1="4" y1="52" x2="60" y2="52" stroke="#4a5568" stroke-width="1" opacity=".4"/>
+        <defs>
+          <linearGradient id="bifrost-grad" x1="0" y1="0" x2="64" y2="0">
+            <stop offset="0%" stop-color="#ff6b6b"/>
+            <stop offset="20%" stop-color="#ffa94d"/>
+            <stop offset="40%" stop-color="#ffd43b"/>
+            <stop offset="60%" stop-color="#69db7c"/>
+            <stop offset="80%" stop-color="#74c0fc"/>
+            <stop offset="100%" stop-color="#b197fc"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <h1>Bifrost</h1>
+      <span class="subtitle">Family Tree</span>
+    </div>
     <div class="error" id="login-error" style="display:none;"></div>
     <form id="login-form">
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="test@example.com" required />
+        <input type="email" id="email" placeholder="your@email.com" required />
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" id="password" placeholder="test123" required />
+        <input type="password" id="password" placeholder="password" required />
       </div>
-      <button type="submit" class="login-btn">Sign In</button>
+      <button type="submit" class="login-btn">Cross the Bridge</button>
     </form>
   </div>
 </div>
