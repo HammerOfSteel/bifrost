@@ -44,6 +44,10 @@ function showLoginPage() {
 function showMainApp() {
   document.getElementById('login-page').classList.remove('active');
   document.getElementById('main-app').classList.add('active');
+  // Show admin button only for admins
+  const user = api.getCurrentUser();
+  const adminBtn = document.getElementById('adminBtn');
+  if (adminBtn) adminBtn.style.display = (user && user.role === 'admin') ? '' : 'none';
 }
 
 // ============================================================================
@@ -112,16 +116,42 @@ function setupEventListeners() {
     addSiblingFlow(currentProfileId);
   });
 
-  // Admin dropdown
-  document.getElementById('adminBtn').addEventListener('click', () => {
-    document.getElementById('adminMenu').classList.toggle('open');
+  // Admin panel
+  document.getElementById('adminBtn').addEventListener('click', openAdminPanel);
+  document.getElementById('adminPanelClose').addEventListener('click', () => {
+    document.getElementById('adminPanel').classList.remove('open');
   });
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.dropdown')) document.getElementById('adminMenu').classList.remove('open');
+  document.getElementById('adminPanel').addEventListener('click', (e) => {
+    if (e.target.id === 'adminPanel') document.getElementById('adminPanel').classList.remove('open');
   });
-  document.getElementById('ddAdd').addEventListener('click', newPersonFlow);
-  document.getElementById('ddExport').addEventListener('click', exportJSON);
-  document.getElementById('fileImport').addEventListener('change', (e) => {
+
+  // Admin tabs
+  document.querySelectorAll('.admin-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.admin-content').forEach(c => c.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+    });
+  });
+
+  // Admin people
+  document.getElementById('admin-add-person').addEventListener('click', () => {
+    document.getElementById('adminPanel').classList.remove('open');
+    newPersonFlow();
+  });
+  document.getElementById('admin-people-search').addEventListener('input', renderAdminPeople);
+
+  // Admin users
+  document.getElementById('admin-add-user').addEventListener('click', () => showUserForm());
+  document.getElementById('au-cancel').addEventListener('click', () => {
+    document.getElementById('admin-user-form').style.display = 'none';
+  });
+  document.getElementById('au-save').addEventListener('click', saveUser);
+
+  // Admin import/export
+  document.getElementById('admin-export').addEventListener('click', exportJSON);
+  document.getElementById('admin-fileImport').addEventListener('change', (e) => {
     if (e.target.files[0]) importJSONFromFile(e.target.files[0]);
   });
 
@@ -656,6 +686,152 @@ async function addSiblingFlow(baseId) {
 
   rebuildChart();
   openEditor(newId);
+}
+
+// ============================================================================
+// ADMIN PANEL
+// ============================================================================
+async function openAdminPanel() {
+  document.getElementById('adminPanel').classList.add('open');
+  loadAdminStats();
+  renderAdminPeople();
+  loadAdminUsers();
+}
+
+async function loadAdminStats() {
+  try {
+    const stats = await api.getStats();
+    const el = document.getElementById('admin-stats');
+    el.innerHTML = [
+      { num: stats.persons, label: 'People' },
+      { num: stats.relationships, label: 'Relationships' },
+      { num: stats.users, label: 'Users' },
+      { num: stats.tags, label: 'Tags' },
+      { num: stats.locations, label: 'Locations' },
+      { num: stats.media, label: 'Media' },
+    ].map(s => `<div class="stat-card"><div class="stat-num">${s.num}</div><div class="stat-label">${s.label}</div></div>`).join('');
+  } catch (e) {
+    console.error('Failed to load stats:', e);
+  }
+}
+
+function renderAdminPeople() {
+  const filter = (document.getElementById('admin-people-search').value || '').toLowerCase();
+  const tbody = document.getElementById('admin-people-tbody');
+  const filtered = DATA.filter(p => {
+    if (!filter) return true;
+    const name = ((p.data?.['first name'] || '') + ' ' + (p.data?.['last name'] || '')).toLowerCase();
+    return name.includes(filter);
+  });
+  tbody.innerHTML = filtered.map(p => {
+    const name = ((p.data?.['first name'] || '') + ' ' + (p.data?.['last name'] || '')).trim() || '(unnamed)';
+    const gender = p.data?.gender || '—';
+    const bday = p.data?.birthday || '—';
+    const dbId = p._dbId || '—';
+    return `<tr>
+      <td>${escapeHtml(String(dbId))}</td>
+      <td><span class="person-row-name">${escapeHtml(name)}</span></td>
+      <td>${escapeHtml(gender)}</td>
+      <td>${escapeHtml(bday)}</td>
+      <td>—</td>
+      <td>
+        <button class="btn btn-sm" onclick="document.getElementById('adminPanel').classList.remove('open');window.openEditorGlobal&&window.openEditorGlobal('${escapeHtml(p.id)}')">Edit</button>
+        <button class="btn btn-sm btn-danger" onclick="window.deletePersonGlobal&&window.deletePersonGlobal('${escapeHtml(p.id)}')">Delete</button>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+// Expose for inline onclick handlers
+window.openEditorGlobal = (id) => openEditor(id);
+window.deletePersonGlobal = (id) => {
+  deletePerson(id);
+  setTimeout(renderAdminPeople, 300);
+};
+
+let editingUserId = null;
+
+async function loadAdminUsers() {
+  try {
+    const users = await api.getUsers();
+    const currentUser = api.getCurrentUser();
+    const tbody = document.getElementById('admin-users-tbody');
+    tbody.innerHTML = users.map(u => {
+      const isSelf = currentUser && currentUser.id === u.id;
+      const created = u.created_at ? new Date(u.created_at).toLocaleDateString() : '—';
+      return `<tr>
+        <td>${u.id}</td>
+        <td>${escapeHtml(u.name)}</td>
+        <td>${escapeHtml(u.email)}</td>
+        <td><span class="badge ${u.is_admin ? 'badge-admin' : 'badge-user'}">${u.is_admin ? 'Admin' : 'User'}</span></td>
+        <td>${created}</td>
+        <td>
+          <button class="btn btn-sm" data-edit-user="${u.id}">Edit</button>
+          ${isSelf ? '' : `<button class="btn btn-sm btn-danger" data-del-user="${u.id}">Delete</button>`}
+        </td>
+      </tr>`;
+    }).join('');
+
+    // Bind edit/delete
+    tbody.querySelectorAll('[data-edit-user]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const uid = parseInt(btn.dataset.editUser);
+        const u = users.find(x => x.id === uid);
+        if (u) showUserForm(u);
+      });
+    });
+    tbody.querySelectorAll('[data-del-user]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const uid = parseInt(btn.dataset.delUser);
+        const u = users.find(x => x.id === uid);
+        if (!u) return;
+        if (!confirm(`Delete user "${u.name}" (${u.email})?`)) return;
+        try {
+          await api.deleteUser(uid);
+          loadAdminUsers();
+          loadAdminStats();
+        } catch (e) { alert('Failed: ' + e.message); }
+      });
+    });
+  } catch (e) {
+    console.error('Failed to load users:', e);
+  }
+}
+
+function showUserForm(user = null) {
+  editingUserId = user ? user.id : null;
+  document.getElementById('admin-user-form-title').textContent = user ? 'Edit User' : 'New User';
+  document.getElementById('au-name').value = user ? user.name : '';
+  document.getElementById('au-email').value = user ? user.email : '';
+  document.getElementById('au-password').value = '';
+  document.getElementById('au-role').value = user ? String(user.is_admin) : 'false';
+  document.getElementById('au-password').placeholder = user ? 'Leave blank to keep current' : 'Min 8 characters';
+  document.getElementById('admin-user-form').style.display = 'block';
+}
+
+async function saveUser() {
+  const name = document.getElementById('au-name').value.trim();
+  const email = document.getElementById('au-email').value.trim();
+  const password = document.getElementById('au-password').value;
+  const is_admin = document.getElementById('au-role').value === 'true';
+
+  if (!name || !email) { alert('Name and email are required'); return; }
+  if (!editingUserId && (!password || password.length < 8)) { alert('Password must be at least 8 characters'); return; }
+
+  try {
+    if (editingUserId) {
+      const data = { name, email, is_admin };
+      if (password) data.password = password;
+      await api.updateUser(editingUserId, data);
+    } else {
+      await api.createUser({ name, email, password, is_admin });
+    }
+    document.getElementById('admin-user-form').style.display = 'none';
+    loadAdminUsers();
+    loadAdminStats();
+  } catch (e) {
+    alert('Failed: ' + e.message);
+  }
 }
 
 // ============================================================================

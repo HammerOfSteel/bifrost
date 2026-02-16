@@ -160,6 +160,63 @@ class APIClient {
     const response = await this.request('DELETE', `/admin/persons/${id}`);
     return response.data;
   }
+
+  // ── User Management (admin) ──
+
+  async getUsers() {
+    const response = await this.request('GET', '/admin/users');
+    return response.data;
+  }
+
+  async createUser(data) {
+    const response = await this.request('POST', '/admin/users', data);
+    return response.data;
+  }
+
+  async updateUser(id, data) {
+    const response = await this.request('PATCH', `/admin/users/${id}`, data);
+    return response.data;
+  }
+
+  async deleteUser(id) {
+    const response = await this.request('DELETE', `/admin/users/${id}`);
+    return response.data;
+  }
+
+  // ── Relationship Management (admin) ──
+
+  async getRelationships() {
+    const response = await this.request('GET', '/admin/relationships');
+    return response.data;
+  }
+
+  async createRelationship(data) {
+    const response = await this.request('POST', '/admin/relationships', data);
+    return response.data;
+  }
+
+  async deleteRelationship(id) {
+    const response = await this.request('DELETE', `/admin/relationships/${id}`);
+    return response.data;
+  }
+
+  // ── Stats ──
+
+  async getStats() {
+    const response = await this.request('GET', '/admin/stats');
+    return response.data;
+  }
+
+  /**
+   * Decode the current JWT token to get user info
+   */
+  getCurrentUser() {
+    if (!this.token) return null;
+    try {
+      const payload = JSON.parse(atob(this.token.split('.')[1]));
+      return { id: payload.sub, email: payload.email, name: payload.name, role: payload.role };
+    } catch { return null; }
+  }
 }
 
 export default new APIClient();
