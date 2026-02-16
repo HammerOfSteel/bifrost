@@ -1,0 +1,1039 @@
+[
+  {
+    "main": true,
+    "data": {
+      "last name": "Eneborg",
+      "birthday": "",
+      "bio": "",
+      "first name": "Bengt",
+      "gender": "M",
+      "locations": [],
+      "media": {
+        "photos": [],
+        "files": [],
+        "videos": []
+      },
+      "avatar": "https://picsum.photos/seed/enef/240/240",
+      "tags": [
+        "Eneborg"
+      ]
+    },
+    "rels": {
+      "spouses": [
+        "ene-mother"
+      ],
+      "children": [
+        "ingrid-ninni",
+        "karin-eneborg",
+        "ake-eneborg"
+      ]
+    },
+    "id": "ene-father"
+  },
+  {
+    "data": {
+      "gender": "F",
+      "last name": "Eneborg",
+      "locations": [],
+      "tags": [
+        "Eneborg"
+      ],
+      "media": {
+        "photos": [
+          "https://scontent.farn1-2.fna.fbcdn.net/v/t1.6435-9/102563891_10156898411921876_2926663721348497408_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=101&ccb=1-7&_nc_sid=714c7a&_nc_ohc=6_JEN6IeXmwQ7kNvwFIxd9a&_nc_oc=AdlNkJX_xQcBrBFBPeoSP9QjBKg4If3jKVkmgFkMPxS9Sv78WaNWoIgOMnv03yHY_UQ&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=QACzhqOVucCZn37XDlOb2w&oh=00_AfUzt1CngE7KxDMr5KF-bUyMGpshVFbTbY1jJtWe8M19bg&oe=68D944C2",
+          "https://scontent.farn1-2.fna.fbcdn.net/v/t1.6435-9/101905489_10156898411886876_1469037299525222400_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=101&ccb=1-7&_nc_sid=714c7a&_nc_ohc=GNH8IHoJNp8Q7kNvwE-w7su&_nc_oc=AdnCjM62SjntnHo66lHQdw0BEH_FfIBQnNLjGSrO5J3BEHnYmfs9IewVisPevQgtR44&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=QACzhqOVucCZn37XDlOb2w&oh=00_AfXdmyxYdFoadeGTcuc-P4oRkFkxxLTFe0oevk8aBbIHhg&oe=68D93D9E",
+          "https://scontent.farn1-2.fna.fbcdn.net/v/t1.6435-9/101326084_10156895191926876_6915000112242491392_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=107&ccb=1-7&_nc_sid=714c7a&_nc_ohc=0nY1ulXSMukQ7kNvwHPokP0&_nc_oc=AdnQ3mQQpYI22Haa6yqlMUlmxK7txWT2dzdOiI4aaNiTmvraCNvNzQkHEj50php_3bU&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=QACzhqOVucCZn37XDlOb2w&oh=00_AfXLiOZ_UDW3KjRR-HNyTscxYs4HLwANfCUnbZoasw_wEw&oe=68D93252",
+          "https://scontent.farn1-2.fna.fbcdn.net/v/t1.6435-9/96364300_10156840689061876_2667414221142097920_n.jpg?stp=c0.89.1080.1080a_dst-jpg_s206x206_tt6&_nc_cat=111&ccb=1-7&_nc_sid=f072d4&_nc_ohc=GIzvBCyV-LwQ7kNvwE0yBlz&_nc_oc=AdnSuaffOp5zFsRGbHP77XF8WVI4NdgRq-dQY7sDrd0xJ4Vj1u0v3wH0YO_PKSMJHmM&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=QACzhqOVucCZn37XDlOb2w&oh=00_AfXpNo74zA94JAQghbRB5--O342h8ExbCMsqPcJ9YPtRYw&oe=68D94450",
+          "https://scontent.farn1-2.fna.fbcdn.net/v/t1.6435-9/79909035_10156433203626876_7933505517194838016_n.jpg?stp=c0.11.720.720a_dst-jpg_s206x206_tt6&_nc_cat=101&ccb=1-7&_nc_sid=f072d4&_nc_ohc=q42t2_A2BeAQ7kNvwH8VfpN&_nc_oc=AdmQtC1wZ1IV0X-mU4j3MguiN3CUpUkRxP6p3OkJ27nUnse7Y2HDfpW_-DFc1IWdopU&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=QACzhqOVucCZn37XDlOb2w&oh=00_AfW3-vTmdcPTUpz9UYqM5vP9s4-HWUiKywqofNUhQsnqNQ&oe=68D92C60",
+          "https://scontent.farn1-2.fna.fbcdn.net/v/t1.6435-9/69036756_10156145466346876_6664711721996779520_n.jpg?stp=c0.35.1080.1080a_dst-jpg_s206x206_tt6&_nc_cat=106&ccb=1-7&_nc_sid=714c7a&_nc_ohc=QV1yQnhMeZkQ7kNvwEEt2Py&_nc_oc=AdnRUZytp80--y_XsuH7cP2CDW5KDn4_cLQaPza3sjhQybC-CvRXTQrnAgeQjOj7dsA&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=QACzhqOVucCZn37XDlOb2w&oh=00_AfUZRTQKh_gOuAdH6BFGjpeTV1C7meib6knPvIyVCalIpA&oe=68D91812",
+          "https://scontent.farn1-2.fna.fbcdn.net/v/t1.6435-9/65809414_10156032856336876_2663738248827764736_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=100&ccb=1-7&_nc_sid=f072d4&_nc_ohc=1jTJjt8LmSsQ7kNvwGN0Xly&_nc_oc=AdmdHSEOA1tZLRpcgOHS_DMGl2lp-cIk4505klfz43y24oyHTa3haRh7nWATworu6FA&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=QACzhqOVucCZn37XDlOb2w&oh=00_AfUvT6N3obdKn2cxdbT7ya6zZo8FslY5rs1xv_Sy3wgiMQ&oe=68D918A2"
+        ],
+        "videos": [],
+        "files": []
+      },
+      "birthday": "",
+      "first name": "Åsa",
+      "avatar": "https://scontent.farn1-2.fna.fbcdn.net/v/t39.30808-6/513825482_10160907442626876_2670606067471810250_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=100&ccb=1-7&_nc_sid=714c7a&_nc_ohc=PNRje3q7ESkQ7kNvwGdWgwA&_nc_oc=AdkNeYVZLfpUDot5k1MbSlmFT5VLjgyDjeCfuve6eCsq1B8si0fR1ZlvR7gl_Ml5k-U&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=iQeUR0PKsYfB2LpaKltLvA&oh=00_AfVbAFnMEJUotdxKktDkRohZeKUrxUv8hHdXbL2ldyVf6Q&oe=68B6254A",
+      "bio": ""
+    },
+    "rels": {
+      "father": "ene-mother-far-eyny",
+      "mother": "ene-mother-mor-2w3l",
+      "spouses": [
+        "ene-father"
+      ],
+      "children": [
+        "ingrid-ninni",
+        "karin-eneborg",
+        "ake-eneborg"
+      ]
+    },
+    "main": false,
+    "id": "ene-mother"
+  },
+  {
+    "id": "stal-father",
+    "rels": {
+      "children": [
+        "hendrik-stalhammar",
+        "per-stalhammar"
+      ],
+      "spouses": [
+        "stal-mother"
+      ]
+    },
+    "main": false,
+    "data": {
+      "avatar": "https://picsum.photos/seed/stalf/240/240",
+      "bio": "",
+      "first name": "Jan",
+      "last name": "Stålhammar",
+      "locations": [],
+      "birthday": "",
+      "media": {
+        "files": [],
+        "photos": [],
+        "videos": []
+      },
+      "gender": "M",
+      "tags": [
+        "Stålhammar"
+      ]
+    }
+  },
+  {
+    "data": {
+      "media": {
+        "photos": [],
+        "videos": [],
+        "files": []
+      },
+      "birthday": "",
+      "tags": [
+        "Stålhammar"
+      ],
+      "avatar": "https://scontent.farn1-2.fna.fbcdn.net/v/t51.75761-15/479566591_18490195084045905_2793970274511140361_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=105&ccb=1-7&_nc_sid=714c7a&_nc_ohc=1VQYyCAZZPQQ7kNvwGv7nXa&_nc_oc=Adku7j5RPXy1ewYYrfo-X2X8yISu9jUYRyEzOa0TtnG9Wrv5ItEpYdRrIeMhxqLZzWM&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=r8j8v4t1-QGw6cJRt02l1Q&oh=00_AfXr9VtcWJkdQiTybBdPkhs7Uk-TieC4DnZDXsPljq6WjA&oe=68B64F0A",
+      "locations": [],
+      "first name": "Anita",
+      "bio": "",
+      "last name": "Stålhammar",
+      "gender": "F"
+    },
+    "rels": {
+      "spouses": [
+        "stal-father"
+      ],
+      "children": [
+        "hendrik-stalhammar",
+        "per-stalhammar"
+      ]
+    },
+    "id": "stal-mother",
+    "main": false
+  },
+  {
+    "id": "ingrid-ninni",
+    "main": false,
+    "data": {
+      "first name": "Ingrid (Ninni)",
+      "locations": [
+        "Sundsvall"
+      ],
+      "gender": "F",
+      "birthday": "† 2016 — Östersund",
+      "tags": [
+        "familj"
+      ],
+      "bio": "Älskad mamma. Äldre syster: Karin (Sundsvall). Äldre bror: Åke (Manchester).",
+      "media": {
+        "videos": [],
+        "files": [],
+        "photos": []
+      },
+      "avatar": "https://scontent.farn1-2.fna.fbcdn.net/v/t39.30808-6/515426122_10160942641231876_3942309888338565996_n.jpg?stp=c0.89.1080.1080a_dst-jpg_s206x206_tt6&_nc_cat=106&ccb=1-7&_nc_sid=50ad20&_nc_ohc=LG7YP9PKHFkQ7kNvwFmB_yU&_nc_oc=Adn-pzxrx87fkZY8bI8KKyWZ2M_AH4rbRzDq1-FNzY69gI5zHUmSV1Ul3pTC1OfijN8&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=B9I12v5m0-oMDm5t7tQeOA&oh=00_AfXVFTwUtgy0uc_FjMnTyqHS2vrlIOwUqzGtRFk9UY1PoQ&oe=68B64863",
+      "last name": "Eneborg"
+    },
+    "rels": {
+      "mother": "ene-mother",
+      "spouses": [
+        "hendrik-stalhammar"
+      ],
+      "children": [
+        "sofia-stalhammar",
+        "eric-stalhammar",
+        "rebecka-stalhammar"
+      ],
+      "father": "ene-father"
+    }
+  },
+  {
+    "id": "karin-eneborg",
+    "data": {
+      "media": {
+        "files": [],
+        "photos": [],
+        "videos": []
+      },
+      "locations": [
+        "Sundsvall"
+      ],
+      "tags": [
+        "Sundsvall"
+      ],
+      "avatar": "https://scontent.farn1-2.fna.fbcdn.net/v/t39.30808-6/419284893_3687038111544087_8264883686570308126_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=hKsijJh2pD4Q7kNvwG5uT9b&_nc_oc=Adn6sn9LK1mpie2VCMY0VdNsQelZt-lj3oO7awxk8Ydnbbb5RF5hYte3b9jplddYH28&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=HJfXSqua1UawOyh8h3o_JA&oh=00_AfW62YQmuXXRc3SFZXICOWTqaAa8Mge0UB69t_E6AA_kkA&oe=68B6417B",
+      "bio": "Äldre syster till Ingrid (Ninni).",
+      "gender": "F",
+      "first name": "Karin",
+      "birthday": "",
+      "last name": "Berg Klawing"
+    },
+    "main": false,
+    "rels": {
+      "father": "ene-father",
+      "mother": "ene-mother",
+      "spouses": []
+    }
+  },
+  {
+    "id": "ake-eneborg",
+    "data": {
+      "avatar": "https://static.bonniernews.se/ba/1jXEtjuqnJTz8zawT2rMTbxY4zA.jpeg?width=640&format=pjpg&auto=webp",
+      "last name": "Eneborg",
+      "bio": "Äldre bror till Ingrid (Ninni).",
+      "media": {
+        "files": [],
+        "videos": [],
+        "photos": []
+      },
+      "tags": [
+        "Manchester"
+      ],
+      "birthday": "",
+      "locations": [
+        "Manchester"
+      ],
+      "gender": "M",
+      "first name": "Åke"
+    },
+    "rels": {
+      "spouses": [],
+      "father": "ene-father",
+      "mother": "ene-mother"
+    },
+    "main": false
+  },
+  {
+    "rels": {
+      "father": "stal-father",
+      "spouses": [
+        "ingrid-ninni"
+      ],
+      "mother": "stal-mother",
+      "children": [
+        "sofia-stalhammar",
+        "eric-stalhammar",
+        "rebecka-stalhammar"
+      ]
+    },
+    "main": false,
+    "data": {
+      "first name": "Hendrik",
+      "gender": "M",
+      "tags": [
+        "familj"
+      ],
+      "bio": "Pappa. Bror: Per Stålhammar (Stockholm).",
+      "last name": "Stålhammar",
+      "avatar": "https://scontent.farn1-2.fna.fbcdn.net/v/t39.30808-6/515707691_10160940668966876_8360476305474143132_n.jpg?stp=c21.0.278.278a_dst-jpg_s206x206_tt6&_nc_cat=103&ccb=1-7&_nc_sid=50ad20&_nc_ohc=xt4582kXFVgQ7kNvwF1jipG&_nc_oc=Adnz44Fg85G-zV-Q3_5K9SEC_KJx549qnSvbXrVjd_mIoX58NZZnnnh-3Ins6U2aa6A&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=p_PtzxUdifrZwFGCANPBRw&oh=00_AfVIRQzEU-6-bIHqkz5tq9IPYW7FUxVvDLbCwAOhA4SlYQ&oe=68B622B1",
+      "locations": [
+        "Stockholm"
+      ],
+      "birthday": "1964 - 2008",
+      "media": {
+        "videos": [],
+        "photos": [],
+        "files": []
+      }
+    },
+    "id": "hendrik-stalhammar"
+  },
+  {
+    "data": {
+      "last name": "Stålhammar",
+      "locations": [
+        "Stockholm"
+      ],
+      "first name": "Per",
+      "avatar": "https://media.licdn.com/dms/image/v2/C4D03AQEyWvzErDuOug/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516772166867?e=2147483647&v=beta&t=GVc7VxAsl6aOB51GmJtgsgn5Ik8ZKVa2RqTIRsgj1qQ",
+      "bio": "Bror till Hendrik.",
+      "tags": [
+        "Stockholm"
+      ],
+      "media": {
+        "photos": [],
+        "files": [],
+        "videos": []
+      },
+      "birthday": "",
+      "gender": "M"
+    },
+    "main": false,
+    "rels": {
+      "father": "stal-father",
+      "spouses": [],
+      "mother": "stal-mother"
+    },
+    "id": "per-stalhammar"
+  },
+  {
+    "data": {
+      "first name": "Sofia",
+      "bio": "Lärare i Norrköping.",
+      "social": {
+        "tiktok": "https://tiktok.com/@sofiastal",
+        "instagram": "https://instagram.com/sofia.stalhammar",
+        "facebook": "https://facebook.com/sofia.stalhammar"
+      },
+      "last name": "Stålhammar",
+      "gender": "F",
+      "locations": [
+        "Norrköping"
+      ],
+      "birthday": "39 — Norrköping",
+      "avatar": "https://scontent.farn1-2.fna.fbcdn.net/v/t39.30808-1/522388357_10161094957366876_5057469598311350317_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=107&ccb=1-7&_nc_sid=e99d92&_nc_ohc=vlec-cLPkTAQ7kNvwG74q6e&_nc_oc=Adn3zwVZiYUn2SvklVTHB449qRLxIhl0Wtc_widwDOeZPMgW2Xpk38mvKg_cZxH_APc&_nc_zt=24&_nc_ht=scontent.farn1-2.fna&_nc_gid=uHO9JmvNv7H330MZcgUg_A&oh=00_AfUqSvHp9yLwAdCh8tGDUR5nsFr-E8gl_x7ODLs_zAkDHw&oe=68B6185D",
+      "media": {
+        "files": [],
+        "photos": [],
+        "videos": []
+      },
+      "tags": [
+        "lärare",
+        "Norrköping"
+      ]
+    },
+    "rels": {
+      "children": [
+        "juni",
+        "clara"
+      ],
+      "mother": "ingrid-ninni",
+      "spouses": [
+        "mathias-jansson",
+        "adam"
+      ],
+      "father": "hendrik-stalhammar"
+    },
+    "main": false,
+    "id": "sofia-stalhammar"
+  },
+  {
+    "data": {
+      "first name": "Eric",
+      "social": {
+        "tiktok": "https://tiktok.com/@ericstal",
+        "instagram": "https://instagram.com/ericstal",
+        "facebook": "https://facebook.com/eric.stalhammar"
+      },
+      "bio": "Storyteller i Östersund.",
+      "media": {
+        "photos": [],
+        "files": [],
+        "videos": []
+      },
+      "tags": [
+        "utvecklare",
+        "storyteller",
+        "Östersund"
+      ],
+      "birthday": "36 — Östersund",
+      "last name": "Stålhammar",
+      "gender": "M",
+      "avatar": "https://scontent.farn1-2.fna.fbcdn.net/v/t39.30808-1/459133868_10170308876225713_5439177166409806772_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=e99d92&_nc_ohc=LiivcpvBgyAQ7kNvwEFCi8l&_nc_oc=AdlhCWVGuzQKtN353_ioXGeH_FCWSVLY2iiGqXVRHEVp9uiyNe_OUQlWGi_KctmHL4g&_nc_zt=24&_nc_ht=scontent.farn1-2.fna&_nc_gid=p1LVJUcsdnPKP9wI_b-DhQ&oh=00_AfXmJdhLXL2G2ZU3FttRfyE8LrIqYKoIE360OlDADVDOUA&oe=68B62401",
+      "locations": [
+        "Östersund"
+      ]
+    },
+    "id": "eric-stalhammar",
+    "main": false,
+    "rels": {
+      "mother": "ingrid-ninni",
+      "spouses": [
+        "haeji-moon",
+        "emma-olsson",
+        "nicole"
+      ],
+      "father": "hendrik-stalhammar",
+      "children": [
+        "rasmus-oliver-stalhammar",
+        "tima-elara-stalhammar"
+      ]
+    }
+  },
+  {
+    "rels": {
+      "father": "hendrik-stalhammar",
+      "spouses": [
+        "mingyu-lee"
+      ],
+      "mother": "ingrid-ninni"
+    },
+    "main": false,
+    "data": {
+      "last name": "Stålhammar",
+      "avatar": "https://scontent.farn1-2.fna.fbcdn.net/v/t1.6435-1/139156336_2976189495816845_1807401409550768726_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=S2olTPePi_cQ7kNvwFWJUdl&_nc_oc=AdlZIesRVVdhKktack0EhuO5UbIO4uOYenyfkIpQ991CGGUJq2nzI_pJicbD7hZ7zBY&_nc_zt=24&_nc_ht=scontent.farn1-2.fna&_nc_gid=cYtYYEMWlK5IVYdrbEgZLQ&oh=00_AfWbceTKRsUyyUXKWmv5D084_hl1OD20LesU6mN7KWODRQ&oe=68D7D608",
+      "bio": "Illustratör och lärare i Seoul.",
+      "first name": "Rebecka",
+      "media": {
+        "files": [],
+        "videos": [],
+        "photos": []
+      },
+      "social": {
+        "facebook": "https://facebook.com/rebecka.stalhammar",
+        "tiktok": "https://tiktok.com/@rebeckaart",
+        "instagram": "https://instagram.com/rebecka.illustration"
+      },
+      "gender": "F",
+      "locations": [
+        "Seoul"
+      ],
+      "tags": [
+        "illustratör",
+        "lärare",
+        "Seoul"
+      ],
+      "birthday": "33 — Seoul"
+    },
+    "id": "rebecka-stalhammar"
+  },
+  {
+    "rels": {
+      "spouses": [
+        "sofia-stalhammar"
+      ],
+      "children": [
+        "clara"
+      ]
+    },
+    "id": "mathias-jansson",
+    "data": {
+      "last name": "Jansson",
+      "media": {
+        "files": [],
+        "photos": [],
+        "videos": []
+      },
+      "first name": "Mathias",
+      "birthday": "",
+      "avatar": "https://scontent.farn1-2.fna.fbcdn.net/v/t39.30808-6/508403497_10160870395781876_7023019921254784777_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=111&ccb=1-7&_nc_sid=714c7a&_nc_ohc=QynPCAFFh6kQ7kNvwH3Ospv&_nc_oc=Adlvz9o2N5lQOtsHyDwKRM8o7iKglItQUAxJq9fgNgwiSJe5pg3clLvgEj_pHK4W3ME&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=0BDV_JZHBuSI3TOLxaNAbw&oh=00_AfVEi-NfGZYaa6lBzj_qE2TMIl5p51-T1S72L19S6dCbyQ&oe=68B633E3",
+      "tags": [],
+      "locations": [],
+      "bio": "",
+      "gender": "M"
+    },
+    "main": false
+  },
+  {
+    "main": false,
+    "data": {
+      "tags": [],
+      "gender": "M",
+      "first name": "Adam",
+      "bio": "",
+      "locations": [],
+      "media": {
+        "photos": [],
+        "files": [],
+        "videos": []
+      },
+      "birthday": "",
+      "last name": "",
+      "avatar": "https://picsum.photos/seed/adam/240/240"
+    },
+    "rels": {
+      "spouses": [
+        "sofia-stalhammar"
+      ],
+      "children": [
+        "juni"
+      ]
+    },
+    "id": "adam"
+  },
+  {
+    "main": false,
+    "data": {
+      "media": {
+        "photos": [],
+        "files": [],
+        "videos": []
+      },
+      "bio": "",
+      "tags": [],
+      "first name": "Mingyu",
+      "gender": "M",
+      "avatar": "https://scontent.farn1-2.fna.fbcdn.net/v/t39.30808-6/503904982_9072161496219584_7557957221353893382_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=102&ccb=1-7&_nc_sid=fe5ecc&_nc_ohc=HpueDaw3yH8Q7kNvwFdPZSD&_nc_oc=AdkNKo38nRgCtNKY_Vn-b68TqUqjT1KL6K_6ARs6VaIae0uy1GZ8Z-gMlbsr2UFUGVE&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=5v6ILP-KN-5U3LCWxoj16Q&oh=00_AfX4fJY0PPRJ1DShnzpCe3Nm9tWxt00Um8DyA2ai9_dHUA&oe=68B61BCF",
+      "birthday": "",
+      "last name": "Lee",
+      "locations": []
+    },
+    "rels": {
+      "spouses": [
+        "rebecka-stalhammar"
+      ]
+    },
+    "id": "mingyu-lee"
+  },
+  {
+    "main": false,
+    "data": {
+      "locations": [],
+      "gender": "F",
+      "last name": "Moon",
+      "tags": [],
+      "first name": "Haeji",
+      "birthday": "",
+      "avatar": "https://scontent.farn1-2.fna.fbcdn.net/v/t39.30808-6/476243671_1653601815192507_6556396373667937087_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=104&ccb=1-7&_nc_sid=fe5ecc&_nc_ohc=KkDBydIBImwQ7kNvwH7WcP5&_nc_oc=Adn2Ysmbtd0gfIpW27q5P6g8W-R2e4d2VLX4FEt-P8IYaUa6T6aJlUF4KmmZKAnEQS4&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=48ZmsqT-VIeD3LCh_pWgJw&oh=00_AfUeS4TIfd-4_AJbfeYnKtB2M7LArdUCFdzwJYk2SKnTfw&oe=68B623DA",
+      "media": {
+        "photos": [],
+        "files": [],
+        "videos": []
+      },
+      "bio": ""
+    },
+    "rels": {
+      "children": [],
+      "spouses": [
+        "eric-stalhammar"
+      ]
+    },
+    "id": "haeji-moon"
+  },
+  {
+    "main": false,
+    "id": "emma-olsson",
+    "rels": {
+      "children": [
+        "rasmus-oliver-stalhammar"
+      ],
+      "spouses": [
+        "eric-stalhammar"
+      ]
+    },
+    "data": {
+      "birthday": "",
+      "first name": "Emma",
+      "avatar": "https://picsum.photos/seed/emma/240/240",
+      "gender": "F",
+      "locations": [],
+      "media": {
+        "files": [],
+        "photos": [],
+        "videos": []
+      },
+      "bio": "",
+      "tags": [],
+      "last name": "Olsson"
+    }
+  },
+  {
+    "data": {
+      "tags": [],
+      "media": {
+        "photos": [],
+        "videos": [],
+        "files": []
+      },
+      "avatar": "https://i.postimg.cc/P5wcvcT8/Screenshot-2025-08-12-153756.png",
+      "locations": [],
+      "bio": "",
+      "last name": "",
+      "gender": "F",
+      "first name": "Nicole",
+      "birthday": ""
+    },
+    "id": "nicole",
+    "main": false,
+    "rels": {
+      "spouses": [
+        "eric-stalhammar"
+      ],
+      "children": [
+        "tima-elara-stalhammar"
+      ]
+    }
+  },
+  {
+    "data": {
+      "last name": "",
+      "avatar": "https://scontent.farn1-2.fna.fbcdn.net/v/t39.30808-6/514066661_10160904275451876_6892074128265314885_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=109&ccb=1-7&_nc_sid=714c7a&_nc_ohc=wkegy1EN2EAQ7kNvwHJPCFu&_nc_oc=AdnQ1eoAyLzJr1JpuvBQU1RfXgUuFQVwuILFx5mtUFPDycupBaeY0qxrk1OCBWIKc5w&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=IaQWn71VZTlnIncL8x2EaQ&oh=00_AfWntH6Pq3Hdg0CGPUFC1PcIM6PLfIFb2dzDWU16cd9uvA&oe=68B6271C",
+      "tags": [
+        "tonåring"
+      ],
+      "bio": "",
+      "gender": "F",
+      "first name": "Juni",
+      "locations": [],
+      "media": {
+        "files": [],
+        "photos": [],
+        "videos": []
+      },
+      "birthday": "15"
+    },
+    "rels": {
+      "mother": "sofia-stalhammar",
+      "spouses": [],
+      "father": "adam"
+    },
+    "id": "juni",
+    "main": false
+  },
+  {
+    "data": {
+      "tags": [
+        "barn"
+      ],
+      "media": {
+        "files": [],
+        "photos": [],
+        "videos": []
+      },
+      "bio": "",
+      "locations": [],
+      "avatar": "https://scontent.farn1-2.fna.fbcdn.net/v/t39.30808-6/506506385_10160836948991876_444422588487528366_n.jpg?stp=c0.158.1440.1440a_dst-jpg_s206x206_tt6&_nc_cat=110&ccb=1-7&_nc_sid=714c7a&_nc_ohc=1ymPF8L_I5IQ7kNvwHJ31rs&_nc_oc=AdmZHj-zBU38fx4LMHZzw7BX97P_QuQcfp6NmjK7UQ7Sse55A5qdUj-6WkfERjNjXMI&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=8B35yn2JEyncYAvCXSVkzQ&oh=00_AfVVc-iP5aleWEdLYFrh3jFU6TKTxf5mwFWdliTk4NnzVw&oe=68B63F43",
+      "gender": "F",
+      "last name": "",
+      "birthday": "10",
+      "first name": "Clara"
+    },
+    "id": "clara",
+    "rels": {
+      "mother": "sofia-stalhammar",
+      "father": "mathias-jansson",
+      "spouses": []
+    },
+    "main": false
+  },
+  {
+    "id": "rasmus-oliver-stalhammar",
+    "main": false,
+    "data": {
+      "gender": "M",
+      "locations": [],
+      "first name": "Rasmus Oliver",
+      "birthday": "19",
+      "last name": "Stålhammar",
+      "media": {
+        "files": [],
+        "photos": [],
+        "videos": []
+      },
+      "avatar": "https://scontent.farn1-2.fna.fbcdn.net/v/t39.30808-6/471721159_10160324600966876_8936965908107718414_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=102&ccb=1-7&_nc_sid=714c7a&_nc_ohc=oW6QLeejUB0Q7kNvwEcCihp&_nc_oc=AdlQmluf5OXTgY1V82Of1VGyqqM4AMO-jkQ2RggACdYbMv4mUxRp3CHQ2tlIJt2bD-I&_nc_zt=23&_nc_ht=scontent.farn1-2.fna&_nc_gid=XaOgH0wAlR1tiMn5iHNxMw&oh=00_AfW629EA54tl4JNWqr7wLqxC-XB5I9mDqKUKB-MyhbDBAQ&oe=68B62499",
+      "tags": [
+        "student"
+      ],
+      "bio": ""
+    },
+    "rels": {
+      "father": "eric-stalhammar",
+      "spouses": [],
+      "mother": "emma-olsson"
+    }
+  },
+  {
+    "id": "tima-elara-stalhammar",
+    "rels": {
+      "children": [],
+      "father": "eric-stalhammar",
+      "mother": "nicole",
+      "spouses": []
+    },
+    "main": false,
+    "data": {
+      "locations": [],
+      "first name": "Tima Elara",
+      "birthday": "2005–2009 †",
+      "bio": "Daffodil.",
+      "tags": [
+        "minne"
+      ],
+      "gender": "F",
+      "avatar": "https://i.postimg.cc/2SgDPh8n/2.png",
+      "last name": "Stålhammar",
+      "media": {
+        "photos": [
+          "https://i.postimg.cc/fLyJLBvP/2.png"
+        ],
+        "files": [
+          {
+            "url": "https://www.canva.com/design/DAGiIfroN9s/zE9Ojv65QB0ySTIzALF5Xw/edit?utm_content=DAGiIfroN9s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+          },
+          {
+            "url": "https://www.canva.com/design/DAGiIfroN9s/zE9Ojv65QB0ySTIzALF5Xw/edit?utm_content=DAGiIfroN9s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+          },
+          {
+            "url": "https://www.canva.com/design/DAGjwYnxZVM/pzlL6eDGEElESyfafi2Hmg/edit?utm_content=DAGjwYnxZVM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+          },
+          {
+            "url": "https://www.canva.com/design/DAGjrq3Eh20/Aswl3Ni5xO_xYBkM3nUfeA/edit?utm_content=DAGjrq3Eh20&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+          }
+        ],
+        "videos": [
+          "https://youtu.be/EhfTLJntmA4?si=jag4Qijna2WXlvxp",
+          "https://youtu.be/sUAQwjdpYao?si=6EqbqM8nvN_jNdqe"
+        ]
+      }
+    }
+  },
+  {
+    "data": {
+      "avatar": "",
+      "tags": [],
+      "media": {
+        "files": [],
+        "photos": [],
+        "videos": []
+      },
+      "last name": "",
+      "first name": "Eric",
+      "locations": [],
+      "gender": "",
+      "birthday": "",
+      "bio": ""
+    },
+    "main": false,
+    "rels": {
+      "spouses": [],
+      "children": []
+    },
+    "id": "eric"
+  },
+  {
+    "main": false,
+    "rels": {
+      "spouses": [],
+      "children": []
+    },
+    "data": {
+      "tags": [],
+      "bio": "",
+      "first name": "Eric",
+      "media": {
+        "files": [],
+        "videos": [],
+        "photos": []
+      },
+      "locations": [],
+      "gender": "",
+      "last name": "Stålhammar",
+      "birthday": "",
+      "avatar": ""
+    },
+    "id": "eric-stlhammar"
+  },
+  {
+    "rels": {
+      "children": [],
+      "spouses": []
+    },
+    "main": false,
+    "data": {
+      "last name": "",
+      "gender": "",
+      "bio": "",
+      "media": {
+        "files": [],
+        "videos": [],
+        "photos": []
+      },
+      "first name": "",
+      "tags": [],
+      "avatar": "",
+      "birthday": "",
+      "locations": []
+    },
+    "id": "person"
+  },
+  {
+    "data": {
+      "media": {
+        "videos": [],
+        "photos": [],
+        "files": []
+      },
+      "last name": "",
+      "locations": [],
+      "avatar": "",
+      "birthday": "",
+      "tags": [],
+      "bio": "",
+      "gender": "",
+      "first name": ""
+    },
+    "main": false,
+    "rels": {
+      "spouses": [],
+      "children": []
+    },
+    "id": "person-1"
+  },
+  {
+    "data": {
+      "last name": "",
+      "locations": [],
+      "avatar": "",
+      "tags": [],
+      "media": {
+        "videos": [],
+        "photos": [],
+        "files": []
+      },
+      "bio": "",
+      "first name": "",
+      "birthday": "",
+      "gender": ""
+    },
+    "main": false,
+    "rels": {
+      "spouses": [],
+      "children": []
+    },
+    "id": "person-2"
+  },
+  {
+    "rels": {
+      "children": [
+        "ene-mother",
+        "aslg-pontara",
+        "barbro-slven"
+      ],
+      "spouses": [
+        "ene-mother-mor-2w3l"
+      ]
+    },
+    "main": false,
+    "data": {
+      "gender": "M",
+      "tags": [],
+      "media": {
+        "videos": [],
+        "photos": [],
+        "files": []
+      },
+      "bio": "",
+      "avatar": "",
+      "birthday": "",
+      "first name": "Okänd",
+      "last name": "Eneborg",
+      "locations": []
+    },
+    "id": "ene-mother-far-eyny"
+  },
+  {
+    "rels": {
+      "spouses": [
+        "ene-mother-far-eyny"
+      ],
+      "children": [
+        "ene-mother",
+        "aslg-pontara",
+        "barbro-slven"
+      ]
+    },
+    "main": false,
+    "id": "ene-mother-mor-2w3l",
+    "data": {
+      "media": {
+        "videos": [],
+        "files": [],
+        "photos": []
+      },
+      "first name": "Elvan",
+      "avatar": "",
+      "tags": [],
+      "gender": "F",
+      "bio": "",
+      "birthday": "",
+      "last name": "Eneborg",
+      "locations": []
+    }
+  },
+  {
+    "id": "aslg-pontara",
+    "main": false,
+    "data": {
+      "media": {
+        "files": [],
+        "photos": [],
+        "videos": []
+      },
+      "tags": [],
+      "first name": "Aslög",
+      "locations": [
+        "enskede",
+        "stockholm"
+      ],
+      "gender": "F",
+      "bio": "",
+      "avatar": "https://scontent.farn1-2.fna.fbcdn.net/v/t39.30808-1/274669881_5209254042426135_1784812476353364742_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=107&ccb=1-7&_nc_sid=e99d92&_nc_ohc=QoxFT0vItz8Q7kNvwF65zIk&_nc_oc=AdngS7pFMnEinItkiMXeVkde91UJm1Weo5ZiSlpjl57CZv1NnS3x9F2KRa6d14g6kOA&_nc_zt=24&_nc_ht=scontent.farn1-2.fna&_nc_gid=f0TMju12hhCY6RvqFyKX7A&oh=00_AfXu24FhDlnnR8I5BiuwyaLuVigoj9AoBUlWf5Cljas_Nw&oe=68B7810F",
+      "last name": "Pontara",
+      "birthday": "1941"
+    },
+    "rels": {
+      "mother": "ene-mother-mor-2w3l",
+      "spouses": [],
+      "children": [],
+      "father": "ene-mother-far-eyny"
+    }
+  },
+  {
+    "rels": {
+      "children": [],
+      "spouses": [
+        "7dd1ff85-677d-49d9-977f-354e16e0a58d"
+      ]
+    },
+    "to_add": true,
+    "id": "9e896617-0f1f-4050-94d6-ad98d6551304",
+    "data": {
+      "gender": "M"
+    },
+    "main": false
+  },
+  {
+    "main": false,
+    "rels": {
+      "spouses": [
+        "9e896617-0f1f-4050-94d6-ad98d6551304"
+      ],
+      "children": [
+        "haeji-moon"
+      ]
+    },
+    "to_add": true,
+    "id": "7dd1ff85-677d-49d9-977f-354e16e0a58d",
+    "data": {
+      "gender": "F"
+    }
+  },
+  {
+    "main": false,
+    "rels": {
+      "spouses": [],
+      "children": []
+    },
+    "data": {
+      "first name": "",
+      "birthday": "",
+      "media": {
+        "videos": [],
+        "files": [],
+        "photos": []
+      },
+      "bio": "",
+      "avatar": "",
+      "tags": [],
+      "locations": [],
+      "gender": "",
+      "last name": ""
+    },
+    "id": "person-3"
+  },
+  {
+    "id": "barbro-slven",
+    "main": false,
+    "rels": {
+      "children": [],
+      "spouses": [],
+      "mother": "ene-mother-mor-2w3l",
+      "father": "ene-mother-far-eyny"
+    },
+    "data": {
+      "first name": "Barbro",
+      "last name": "Sölven",
+      "gender": "F",
+      "tags": [],
+      "bio": "",
+      "birthday": "1935",
+      "media": {
+        "videos": [],
+        "files": [],
+        "photos": []
+      },
+      "locations": [
+        "strängnäs"
+      ],
+      "avatar": ""
+    }
+  },
+  {
+    "main": false,
+    "rels": {
+      "spouses": [],
+      "children": []
+    },
+    "id": "person-4",
+    "data": {
+      "avatar": "",
+      "locations": [],
+      "last name": "",
+      "birthday": "",
+      "tags": [],
+      "gender": "",
+      "media": {
+        "videos": [],
+        "photos": [],
+        "files": []
+      },
+      "first name": "",
+      "bio": ""
+    }
+  },
+  {
+    "data": {
+      "locations": [],
+      "tags": [],
+      "first name": "",
+      "last name": "",
+      "avatar": "",
+      "gender": "",
+      "birthday": "",
+      "bio": "",
+      "media": {
+        "videos": [],
+        "files": [],
+        "photos": []
+      }
+    },
+    "rels": {
+      "spouses": [],
+      "children": []
+    },
+    "id": "person-5",
+    "main": false
+  },
+  {
+    "rels": {
+      "children": [],
+      "spouses": []
+    },
+    "data": {
+      "locations": [],
+      "birthday": "",
+      "last name": "",
+      "media": {
+        "photos": [],
+        "files": [],
+        "videos": []
+      },
+      "bio": "",
+      "avatar": "",
+      "first name": "",
+      "tags": [],
+      "gender": ""
+    },
+    "id": "person-6",
+    "main": false
+  }
+]

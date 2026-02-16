@@ -1,0 +1,94 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:16
+    container_name: brimfrost_db
+    environment:
+      POSTGRES_USER: ${DB_USER:-brimfrost_user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-brimfrost_pass}
+      POSTGRES_DB: ${DB_NAME:-brimfrost}
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=C"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/db/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-brimfrost_user} -d ${DB_NAME:-brimfrost}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - brimfrost_network
+    restart: unless-stopped
+
+  # Node.js Backend API
+  backend:
+    build:
+      context: ./
+      dockerfile: ./docker/backend.Dockerfile
+    container_name: brimfrost_backend
+    environment:
+      NODE_ENV: ${NODE_ENV:-development}
+      PORT: 3000
+      DATABASE_URL: postgresql://${DB_USER:-brimfrost_user}:${DB_PASSWORD:-brimfrost_pass}@db:5432/${DB_NAME:-brimfrost}
+      JWT_SECRET: ${JWT_SECRET:-dev_secret_key_change_in_production}
+      JWT_EXPIRES_IN: 24h
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:3000}
+    ports:
+      - "${BACKEND_PORT:-3000}:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    networks:
+      - brimfrost_network
+    restart: unless-stopped
+    command: npm run dev
+
+  # Frontend (Vite dev server)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ../docker/frontend.Dockerfile
+    container_name: brimfrost_frontend
+    environment:
+      VITE_API_URL: ${VITE_API_URL:-http://localhost:3000/api}
+    ports:
+      - "${FRONTEND_PORT:-5173}:5173"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - brimfrost_network
+    restart: unless-stopped
+
+  # Optional: pgAdmin for database management (dev only)
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: brimfrost_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL:-admin@example.com}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD:-admin}
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+    networks:
+      - brimfrost_network
+    restart: unless-stopped
+    profiles: ["dev"]
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  brimfrost_network:
+    driver: bridge

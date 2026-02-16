@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:16
+    container_name: bifrost_db
+    environment:
+      POSTGRES_USER: ${DB_USER:-brimfrost_user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME:-brimfrost}
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=C"
+    volumes:
+      - bifrost_postgres_data:/var/lib/postgresql/data
+      - ./backend/db/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-brimfrost_user} -d ${DB_NAME:-brimfrost}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - bifrost_network
+    restart: unless-stopped
+
+  # Node.js Backend API
+  backend:
+    build:
+      context: ./
+      dockerfile: ./docker/backend.prod.Dockerfile
+    container_name: bifrost_backend
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DATABASE_URL: postgresql://${DB_USER:-brimfrost_user}:${DB_PASSWORD}@db:5432/${DB_NAME:-brimfrost}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_EXPIRES_IN: 24h
+      FRONTEND_URL: https://bifrost.dancingsalamanders.com
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - bifrost_network
+    restart: unless-stopped
+
+  # Frontend (nginx serving static files + API proxy)
+  frontend:
+    build:
+      context: ./
+      dockerfile: ./docker/frontend.prod.Dockerfile
+    container_name: bifrost_frontend
+    ports:
+      - "8081:80"
+    depends_on:
+      - backend
+    networks:
+      - bifrost_network
+    restart: unless-stopped
+
+volumes:
+  bifrost_postgres_data:
+    driver: local
+
+networks:
+  bifrost_network:
+    driver: bridge
